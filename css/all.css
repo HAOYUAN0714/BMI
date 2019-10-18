@@ -1,0 +1,310 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*消除button默認*/
+button{
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
+}
+/*針對所有瀏覽器修改placeholder 文字顏色等屬性 */
+::-webkit-input-placeholder { color:#b1b1b1;font-size:18px; }
+::-moz-placeholder { color:#b1b1b1;font-size:18px; } /* firefox 19+ */
+:-ms-input-placeholder { color:#b1b1b1;font-size:18px;} /* ie */
+input:-moz-placeholder { color:#b1b1b1;font-size:18px; }
+
+/*----------------------------------*/
+/*				layout				*/
+.wrap{
+	width: 1024px;
+    margin:0 auto;
+    background-color: #f5f5f5;
+}
+.header{
+    margin-bottom: 100px;
+    background-color: #424242;
+    padding:100px 100px 100px 220px;
+}
+.content{
+	margin-bottom: 100px;
+}
+.clearfix{
+	clear:both;
+}
+.floatL{
+    float:left;
+}
+.floatR{
+    float:right;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: bold;
+}
+/*----------------------------------*/
+/*				header				*/
+.BMI_logo{
+    margin-top:10px;margin-bottom:10px
+}
+.BMI_form{
+    width: 500px;
+    position: relative;
+}
+.height_div{
+    width: 200px;
+    line-height:24px;
+    margin-top:10px;margin-bottom: 10px;
+    color:#ffd366;
+}
+.weight_div{
+    width: 200px;
+    line-height:24px;
+    margin-top:10px;margin-bottom: 10px;
+    color:#ffd366;
+}
+
+.BMI_form input{
+    border:2px solid #ffd366;
+    border-radius:5px;
+    background-color: #646464;
+    color:white;
+    padding:5px 10px;
+}
+.BMI_form input:focus{
+    background-color: white;
+    color:black;
+}
+.BMI_submit{
+    width: 100px;height: 100px;
+    border-radius:100%;
+    background-color: #ffd366;color:#424242;
+    margin-top:20px;
+    font-weight:bold;
+}
+.BMI_submit:hover{
+    background-color:#e2d4b2;
+    cursor:pointer;
+}
+/*------------------------------------------*/
+/*				result_div_hide				*/
+
+/* 共通屬性 */
+.result_div_hide{
+    display:none;
+    width: 250px;
+    height: 125px;
+    margin-right:30px;
+    margin-top: 20px;
+}
+.result_aside_btn{
+    width: 100px;height: 100px;
+    border:3px solid;
+    border-radius:50%;
+    position: relative;
+}
+.BMI_value{
+    width: 75px;
+    display: inline-block;
+    position: absolute;
+    left:14%;
+    top:32%;
+    font-size: 32px;
+    text-align: center;
+}
+.BMI_unit{
+    position: absolute;
+    left:42%;
+    top:65%;
+    font-size: 8px;
+    font-weight:bold;
+}
+.return_button{
+    width: 27px;height: 27px;
+    position: absolute;
+    border-radius:50%;
+    border:2px solid #424242;
+    padding:2px 0 0 0.5px;
+    top:72%;
+    left:75%;
+}
+.return_button:hover{
+    cursor: pointer;
+}
+.result_judge_text{
+    font-weight:bold;
+    font-size:24px;
+    margin:36px 0 0 10px;
+}
+
+/* BMI判斷後個別屬性 */
+
+/* 過輕 */
+.judge_color_blue{
+    color:#31baf9;
+    border-color:#31baf9;
+}
+.judge_color_blue .btn_bg_color{
+    background: #31baf9;
+}
+.judge_color_blue .btn_bg_color:hover{
+    background: rgb(233, 180, 130);
+}
+/* 理想 */
+.judge_color_green{
+    color:#86d73f;
+    border-color:#86d73f;
+}
+.judge_color_green .btn_bg_color{
+    background: #86d73f;
+}
+.judge_color_green .btn_bg_color:hover{
+    background: rgb(233, 180, 130);
+}
+/* 過重 */
+.judge_color_orange_light{
+    color:#ff982d;
+    border-color:#ff982d;
+}
+.judge_color_orange_light .btn_bg_color{
+    background: #ff982d;
+}
+.judge_color_orange_light .btn_bg_color:hover{
+    background: rgb(233, 180, 130);
+}
+/* 輕度肥胖 */
+.judge_color_orange{
+    color:#ff6c03;
+    border-color:#ff6c03;
+}
+.judge_color_orange .btn_bg_color{
+    background: #ff6c03;
+}
+.judge_color_orange .btn_bg_color:hover{
+    background: rgb(233, 180, 130);
+}
+/* 中度肥胖 */
+.judge_color_orange_deep{
+    color:#cf3000;
+    border-color:#cf3000;
+}
+.judge_color_orange_deep .btn_bg_color{
+    background: #cf3000;
+}
+.judge_color_orange_deep .btn_bg_color:hover{
+    background: rgb(233, 180, 130);
+}
+/* 重度肥胖 */
+.judge_color_red{
+    color:red;
+    border-color:red;
+}
+.judge_color_red .btn_bg_color{
+    background: red;
+}
+.judge_color_red .btn_bg_color:hover{
+    background: rgb(233, 180, 130);
+}
+
+
+/*----------------------------------*/
+/*				content				*/
+.BMI_record_title{
+    text-align: center;
+    font-size:32px;
+}
+.BMI_record_list{
+    width: 780px;
+    padding:10px;
+    margin:10px auto;
+}
+.BMI_record_li{
+    line-height:32px;
+    text-align: center;
+    background-color: white;
+    margin-bottom:15px;
+}
+.BMI_record_li span{
+    margin:10px;
+}
+.BMI_record_li .judge_text{
+    display:inline-block;
+    width: 80px;
+    text-align: left;
+}
+.BMI_record_li .tag{
+    font-size:12px;
+    margin:10px 10px 10px 70px;
+}
+.BMI_record_li .date_align{
+    display:inline-block;
+    width: 95px;
+    text-align: right;
+}
+
+.BMI_record_li .unit{
+    margin-left:0;
+}
+
+.BMI_record_li:hover{
+    cursor:pointer;
+    background-color: #e2d4b2;
+}
+/*邊框顏色判定*/
+.judge_blue{
+    border-left:5px solid #31baf9;
+}
+.judge_green{
+    border-left:5px solid #86d73f;
+}
+.judge_orange_light{
+    border-left:5px solid #ff982d;
+}
+.judge_orange{
+    border-left:5px solid #ff6c03;
+}
+.judge_orange_deep{
+    border-left:5px solid #cf3000;
+}
+.judge_red{
+    border-left:5px solid red;
+}

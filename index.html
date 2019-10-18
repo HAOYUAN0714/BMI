@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BMI計算紀錄器</title>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <img src="./images/BMICLogo.png" class="BMI_logo floatL" >
+    <form class="BMI_form floatR ">
+      <div class='floatL'>
+        <div class="height_div">
+          <label for="inputHeight" class="height_label">身高 cm</label></br>
+          <input placeholder="請輸入身高" id="inputHeight" type="text" name="身高(cm)" class="inputHeight">
+        </div>
+        <div class="weight_div">
+          <label for="inputWeight" class="weight_label">體重 kg</label></br>
+          <input placeholder="請輸入體重" id="inputWeight" type="text" name="體重(kg)" class="inputWeight">
+        </div>
+      </div>
+      <button type="submit" class="BMI_submit" >看結果</button>
+      <div class="result_div_hide floatR " >
+        <div class="result_aside_btn floatL">
+          <span class="BMI_value"></span><br/>
+          <span class=BMI_unit>BMI</span>
+          <button class="return_button btn_bg_color">
+            <img src="./images/icons_loop.png" >
+          </button>
+        </div>
+        <div class="result_judge_text floatL" ></div>
+      </div>
+    </form>
+    <div class="clearfix"></div>
+  </div>
+  <div class="content">
+    <h2 class="BMI_record_title">BMI紀錄</h2>
+    <ul class="BMI_record_list BMI_record_delete"></ul>
+  </div>
+  <div class="footer">
+    <div class='footer_logo'></div>
+  </div>
+</div>
+</body>
+<script src="./js/all.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/all.css">
+</html>
