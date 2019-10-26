@@ -19,14 +19,12 @@ firebase.database().ref('BMIData').on('value', (snapshot) => {
   if(BMIData === []) {
     return;
   }
-  BMIData.forEach((item,key) => {
+  BMIData.forEach((item) => {
     console.log(item);
     str+=`<li class="BMI_record_li ${item.content.color}" data-key="${item.key}"><span class="judge_text">${item.content.Judge}</span><span class="tag">BMI</span>${item.content.BMI}<span class="tag">Weight</span>${item.content.Height}<span class="unit">cm</span><span class="tag">Height</span>${item.content.Weight}<span class="unit">kg</span><span class="tag date_align">${item.content.Date}</span></li>`;
   })
   BMI_record_list.innerHTML = str ;
 });
-
-
 
 //點及'看結果'增加紀錄
 BMI_submit.addEventListener('click',(e) => {
@@ -105,6 +103,7 @@ BMI_submit.addEventListener('click',(e) => {
 });
 
 BMI_record_delete.addEventListener('click',(e) => {
+
   if(e.target.nodeName === 'LI'){
 
     firebase.database().ref('BMIData').on('value', (snapshot) => {
