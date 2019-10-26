@@ -44,6 +44,31 @@
   </div>
 </div>
 </body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries
+-->
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+<!--  載入Reatime Database 的功能-->
+<script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-database.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCxTHjLzPw6SyvywDeM9OChXq9cEkEBXF8",
+    authDomain: "firstbase-e6b93.firebaseapp.com",
+    databaseURL: "https://firstbase-e6b93.firebaseio.com",
+    projectId: "firstbase-e6b93",
+    storageBucket: "firstbase-e6b93.appspot.com",
+    messagingSenderId: "1066503185858",
+    appId: "1:1066503185858:web:d654fee9f3e0ea9b29e25b",
+    measurementId: "G-FSYR273SQ3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 <script src="./js/all.js"></script>
 <link rel="stylesheet" type="text/css" href="./css/all.css">
 </html>
